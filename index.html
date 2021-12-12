@@ -3,33 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="sal.css" />
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <title>Noble Digital Trust</title>
+    <title>Præsentationsportfolio</title>
   </head>
-
-
-
 
   <body>
     <div class="wrapper">
-
       <!--  header -->
       <header>
         <div>
           <a href="#" class="logo">JTLD</a>
           <nav>
             <ul>
-              <li><a href="#home">Om mig</a></li>
-              <li><a href="#about">Projekter</a></li>
-              <li><a href="#services">Portfolio</a></li>
-              <li><a href="#client">Kontakt</a></li>
+              <li><a href="#about">Om mig</a></li>
+              <li><a href="#projekt">Projekter</a></li>
+              <li><a href="#">Portfolio</a></li>
+              <li><a href="#footer">Kontakt</a></li>
             </ul>
           </nav>
-        </div>
-
-        <div class="contactBtn">
-          <a href="#contact">Kontakt</a>
         </div>
 
         <div class="toggle" onclick="toggleClassName();"></div>
@@ -39,31 +30,66 @@
 
       <div class="sidebar">
         <ul>
-          <li><a href="#home">Om mig</a></li>
-          <li><a href="#about">Projekter</a></li>
-          <li><a href="#services">Portfolio</a></li>
-          <li><a href="#client">Kontakt</a></li>
-
+          <li><a href="#about">Om mig</a></li>
+          <li><a href="#projekt">Projekter</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#footer">Kontakt</a></li>
         </ul>
       </div>
     </div>
 
-    <section class="hero">
+    <!-- Hero -->
 
+    <section class="hero">
       <div class="split">
-        <div class="hero-txt">test</div>
-        <div class="hero-img"><img src="/images/portraet2.png" alt="Selvportræt"></div>
+        <div class="hero-txt">
+          <h1>Velkommen!<br>Mit navn er<br><b>Jacky Doan</b></h1>
+          <p>Design. Content. Multimediedesigner.</p>
+        </div>
+        <div class="hero-img"></div>
+      </div>
+
+      <div class="contactBtn">
+        <a href="#footer">Kontakt mig</a>
       </div>
 
     </section>
 
-    <section class="about">hej</section>
-    <section class="projekter">hej</section>
-    <footer>hej</footer>
+    <div class="line"></div>
+
+    <section class="about" id="about"></section>
+
+    <div class="ommig">Om mig</div>
+
+    <div class="split2">
+      <div class="en">
+        <div>GG</div>
+      </div>
+
+      <div class="seks">
+        <div>
+          <div>GG</div>
+          <div>GG</div>
+          <div>GG</div>
+        </div>
+
+        <div>
+          <div>GG</div>
+          <div>GG</div>
+          <div>GG</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="line"></div>
+
+    <section class="projekt" id="projekt">Projekter</section>
+
+    <div class="line"></div>
+
+    <footer id="footer">Kontakt</footer>
 
     <script type="text/javascript">
-
-
       function toggleClassName() {
         var sidebar = document.querySelector(".sidebar");
         var wrapper = document.querySelector(".wrapper");

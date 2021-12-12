@@ -1,45 +1,33 @@
 /* UTIL */
 
 :root {
-  --background: #1f2833;
+  --background: #052b53;
   --black: #0b0c10;
   --darkblue: #1f2833;
   --lightgrey: #c5c6c7;
   --lightblue: #66fcf1;
   --darkblue: #45a29e;
-}
-
-.heading {
-  position: relative;
-  color: #fff;
-  font-size: 30px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin-bottom: 10px;
-}
-.text {
-  position: relative;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 300;
-  letter-spacing: 1px;
+  --orange: #a67a61;
 }
 
 img {
   width: 100%;
 }
+
 /* SITE */
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+@import url('http://fonts.cdnfonts.com/css/futura-condensed-pt');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 body {
-  background: #12222d;
+  background: var(--background);
   height: 1000px;
   overflow-x: hidden;
 }
@@ -74,7 +62,7 @@ header div {
 
 header.sticky {
   padding: 20px 100px;
-  background: #162c3b;
+  background: var(--background);
 }
 
 header .toggle {
@@ -126,23 +114,6 @@ nav ul a:hover {
   color: rgb(255, 255, 255);
 }
 
-.contactBtn {
-  display: block;
-  border: 2px solid rgb(255, 255, 255);
-  padding: 10px;
-  border-radius: 50px;
-}
-
-@media (max-width: 991px) {
-  .contactBtn {
-    display: none;
-  }
-}
-
-.contactBtn a {
-  text-decoration: none;
-  color: var(--lightgrey);
-}
 
 /* --- SIDEBAR --- */
 
@@ -184,11 +155,13 @@ nav ul a:hover {
 /* --- HERO --- */
 
 .hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.445), rgba(0, 0, 0, 0.411)),
+    url("images/space3.jpg");
   height: 700px;
   width: 100%;
   object-fit: contain;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.445), rgba(0, 0, 0, 0.411)),
-    url("images/space3.jpg");
+  background-position: center;
+  background-size: cover;
   
 }
 
@@ -204,6 +177,143 @@ nav ul a:hover {
   width: 50%;
 }
 
+.hero-txt {
+  color: var(--orange);
+  width: 100%;
+}
+
+.hero-txt h1 {
+  font-weight: 300;
+  color: #a67a61;
+  line-height: 1em;
+  text-align: center;
+  position: relative;
+  font-size: 4vw;
+  bottom: 10%;
+  left: 35%;
+  width: 100%;
+}
+
+.hero-txt p {
+  font-weight: 300;
+  line-height: 1em;
+  color: #a67a61;
+  text-align: center;
+  position: relative;
+  font-size: 4vw;
+  top: 20%;
+  right: 30%;
+}
+
 .hero-img {
-  
+  background-image: url("images/portraet2.png");
+  position: relative;
+  height: 100%;
+  background-position: right bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+}
+
+.line {
+  width: 90%;
+  height: 5px;
+  background: var(--orange);
+  margin: 50px;
+  border-radius: 5px;
+}
+
+.contactBtn {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 12px 34px;
+  font-size: 20px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  bottom: 15%;
+  left: 15%;
+}
+
+.contactBtn:hover {
+  border: 2px solid #c0c0c0;
+  background: #c0c0c083;
+  transition: 1s;
+}
+
+@media (max-width: 991px) {
+  .contactBtn {
+    display: none;
+  }
+}
+
+.contactBtn a {
+  text-decoration: none;
+  color: var(--lightgrey);
+}
+
+/* --- About --- */
+
+.ommig {
+  font-family: 'Futura PT', sans-serif;
+  color: var(--orange);
+  font-weight: bold;
+  font-size: 30px;
+  position: relative;
+  border: 3px solid var(--orange);
+  display: inline-block;
+  text-decoration: none;
+  background: transparent;
+  padding: 12px 34px;
+  margin-left: 45%;
+  margin-bottom: 2%;
+}
+
+.split2 {
+  display: flex;
+  height: 700px;
+}
+
+.en {
+  display: flex;
+  height: 100%;
+  background-color: white;
+  margin: 10px;
+  width: 50%;
+  border: 3px solid var(--orange);
+}
+
+.seks {
+  display: flex;
+  max-height: 700px;
+  width: 50%;
+  margin-right: 10px;
+}
+
+.seks div {
+  width: 100%;
+  margin: 10px;
+}
+
+.seks div div {
+  background-color: white;
+  height: 32%;
+  border: 3px solid var(--orange);
+}
+
+@media (max-width: 991px) {
+  .split {
+    flex-direction: column;
+  }
+
+  .en {
+    width: 96%;
+    margin-right: 10px;
+  }
+
+  .seks {
+    width: 96%;
+  }
 }
