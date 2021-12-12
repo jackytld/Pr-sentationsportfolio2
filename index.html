@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="sal.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Noble Digital Trust</title>
+  </head>
+
+
+
+
+  <body>
+    <div class="wrapper">
+
+      <!--  header -->
+      <header>
+        <div>
+          <a href="#" class="logo">JTLD</a>
+          <nav>
+            <ul>
+              <li><a href="#home">Om mig</a></li>
+              <li><a href="#about">Projekter</a></li>
+              <li><a href="#services">Portfolio</a></li>
+              <li><a href="#client">Kontakt</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="contactBtn">
+          <a href="#contact">Kontakt</a>
+        </div>
+
+        <div class="toggle" onclick="toggleClassName();"></div>
+      </header>
+
+      <!--  Sidebar -->
+
+      <div class="sidebar">
+        <ul>
+          <li><a href="#home">Om mig</a></li>
+          <li><a href="#about">Projekter</a></li>
+          <li><a href="#services">Portfolio</a></li>
+          <li><a href="#client">Kontakt</a></li>
+
+        </ul>
+      </div>
+    </div>
+
+    <section class="hero">
+
+      <div class="split">
+        <div class="hero-txt">test</div>
+        <div class="hero-img"><img src="/images/portraet2.png" alt="Selvportræt"></div>
+      </div>
+
+    </section>
+
+    <section class="about">hej</section>
+    <section class="projekter">hej</section>
+    <footer>hej</footer>
+
+    <script type="text/javascript">
+
+
+      function toggleClassName() {
+        var sidebar = document.querySelector(".sidebar");
+        var wrapper = document.querySelector(".wrapper");
+        var toggle = document.querySelector(".toggle");
+        sidebar.classList.toggle("active");
+        wrapper.classList.toggle("active");
+        toggle.classList.toggle("active");
+      }
+
+      window.addEventListener("scroll", function () {
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+      });
+    </script>
+
+  </body>
+</html>

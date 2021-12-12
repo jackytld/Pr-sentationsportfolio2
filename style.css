@@ -1,0 +1,209 @@
+/* UTIL */
+
+:root {
+  --background: #1f2833;
+  --black: #0b0c10;
+  --darkblue: #1f2833;
+  --lightgrey: #c5c6c7;
+  --lightblue: #66fcf1;
+  --darkblue: #45a29e;
+}
+
+.heading {
+  position: relative;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.text {
+  position: relative;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+img {
+  width: 100%;
+}
+/* SITE */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: #12222d;
+  height: 1000px;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  position: relative;
+  transition: 0.5s;
+  left: 0;
+}
+.wrapper.active {
+  left: -250px;
+}
+
+/* --- HEADER --- */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000;
+  transition: 0.5s;
+}
+
+header div {
+  display: flex;
+}
+
+header.sticky {
+  padding: 20px 100px;
+  background: #162c3b;
+}
+
+header .toggle {
+  position: relative;
+  width: 36px;
+  height: 28px;
+  background: url(images/toggle.png);
+  background-size: cover;
+  cursor: pointer;
+}
+header .toggle.active {
+  background: url(images/close.png);
+  background-size: cover;
+}
+
+@media (min-width: 991px) {
+  header .toggle {
+    display: none;
+  }
+}
+.logo {
+  display: flex;
+  font-size: 33px;
+  text-decoration: none;
+  color: var(--lightgrey);
+}
+
+@media (max-width: 991px) {
+  nav {
+    display: none;
+  }
+}
+
+nav ul {
+  margin-left: 120px;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  list-style: none;
+}
+
+nav ul a {
+  padding: 20px 20px;
+  text-decoration: none;
+  color: var(--lightgrey);
+}
+
+nav ul a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.contactBtn {
+  display: block;
+  border: 2px solid rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 50px;
+}
+
+@media (max-width: 991px) {
+  .contactBtn {
+    display: none;
+  }
+}
+
+.contactBtn a {
+  text-decoration: none;
+  color: var(--lightgrey);
+}
+
+/* --- SIDEBAR --- */
+
+.sidebar {
+  position: fixed;
+  right: -200px;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  background: #12222d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  transition: 0.5s;
+}
+.sidebar.active {
+  right: 0;
+}
+.sidebar ul {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar ul li {
+  list-style: none;
+  margin: 5px 0;
+}
+.sidebar ul li a {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 400;
+  text-decoration: none;
+}
+.sidebar ul li a:hover {
+  color: #3f8ffc;
+}
+
+/* --- HERO --- */
+
+.hero {
+  height: 700px;
+  width: 100%;
+  object-fit: contain;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.445), rgba(0, 0, 0, 0.411)),
+    url("images/space3.jpg");
+  
+}
+
+.split {
+  display: flex;
+  height: 100%;
+}
+
+.split div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.hero-img {
+  
+}
