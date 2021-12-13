@@ -2,12 +2,9 @@
 
 :root {
   --background: #052b53;
-  --black: #0b0c10;
-  --darkblue: #1f2833;
   --lightgrey: #c5c6c7;
-  --lightblue: #66fcf1;
-  --darkblue: #45a29e;
   --orange: #a67a61;
+  --grey: #6E6E74;
 }
 
 img {
@@ -17,7 +14,7 @@ img {
 /* SITE */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
-@import url('http://fonts.cdnfonts.com/css/futura-condensed-pt');
+@import url("https://use.typekit.net/xly5fcc.css");
 
 * {
   margin: 0;
@@ -62,7 +59,7 @@ header div {
 
 header.sticky {
   padding: 20px 100px;
-  background: var(--background);
+  background: var(--grey);
 }
 
 header .toggle {
@@ -107,7 +104,8 @@ nav ul {
 nav ul a {
   padding: 20px 20px;
   text-decoration: none;
-  color: var(--lightgrey);
+  color: #fdab7b;
+  font-weight: bold;
 }
 
 nav ul a:hover {
@@ -123,7 +121,7 @@ nav ul a:hover {
   top: 0;
   width: 200px;
   height: 100%;
-  background: #12222d;
+  background: var(--grey);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -162,7 +160,6 @@ nav ul a:hover {
   object-fit: contain;
   background-position: center;
   background-size: cover;
-  
 }
 
 .split {
@@ -184,7 +181,7 @@ nav ul a:hover {
 
 .hero-txt h1 {
   font-weight: 300;
-  color: #a67a61;
+  color: var(--orange);
   line-height: 1em;
   text-align: center;
   position: relative;
@@ -197,7 +194,7 @@ nav ul a:hover {
 .hero-txt p {
   font-weight: 300;
   line-height: 1em;
-  color: #a67a61;
+  color: var(--orange);
   text-align: center;
   position: relative;
   font-size: 4vw;
@@ -243,21 +240,41 @@ nav ul a:hover {
   transition: 1s;
 }
 
-@media (max-width: 991px) {
-  .contactBtn {
-    display: none;
-  }
-}
-
 .contactBtn a {
   text-decoration: none;
   color: var(--lightgrey);
 }
 
+@media (max-width: 991px) {
+  
+.hero {
+    height: 40%;
+    width: 100%;;
+  }
+
+  .hero-txt h1 {
+    font-size: 5vw;
+    position: relative;
+    left: 60%;
+  }
+
+  .hero-txt p {
+    font-size: 5vw;
+    position: relative;
+    right: 20%;
+  }
+
+  .contactBtn {
+  font-size: 2.5vw;
+}
+
+}
+
 /* --- About --- */
 
 .ommig {
-  font-family: 'Futura PT', sans-serif;
+  font-family: "futura-pt", sans-serif;
+  font-style: normal;
   color: var(--orange);
   font-weight: bold;
   font-size: 30px;
@@ -269,11 +286,15 @@ nav ul a:hover {
   padding: 12px 34px;
   margin-left: 45%;
   margin-bottom: 2%;
+  
 }
 
 .split2 {
   display: flex;
   height: 700px;
+  font-family: 'Futura PT', sans-serif;
+  font-weight: medium;
+  margin: 20px;
 }
 
 .en {
@@ -281,8 +302,12 @@ nav ul a:hover {
   height: 100%;
   background-color: white;
   margin: 10px;
+  padding: 10px;
   width: 50%;
   border: 3px solid var(--orange);
+  font-size: 1.5vw;
+  box-shadow: -14px 12px 0px rgba(0, 0, 0, 0.16);
+  font-family: 'futura-pt', sans-serif;
 }
 
 .seks {
@@ -294,26 +319,73 @@ nav ul a:hover {
 
 .seks div {
   width: 100%;
-  margin: 10px;
+  margin: 5px;
 }
 
+/*
 .seks div div {
   background-color: white;
   height: 32%;
   border: 3px solid var(--orange);
+  box-shadow: -14px 12px 0px rgba(0, 0, 0, 0.16);
+  position: relative;
+  font-size: 1vw;
+}
+*/
+
+.box1, .box2, .box3, .box4, .box5, .box6 {
+  background-color: white;
+  height: 32%;
+  border: 3px solid var(--orange);
+  box-shadow: -14px 12px 0px rgba(0, 0, 0, 0.16);
+  position: relative;
+}
+
+.box1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.box-txt {
+  display: flex;
+  align-items: flex-start;
+}
+
+.box-img {
+  background-image: url("/images/pencil-alt.png");
+  background-repeat: no-repeat;
+  height: 100%;
+  background-position: center;
+}
+
+.skills-title {
+  text-align: center;
+  margin-top: 5%;
 }
 
 @media (max-width: 991px) {
-  .split {
+  .split2 {
     flex-direction: column;
   }
 
   .en {
     width: 96%;
     margin-right: 10px;
+    font-size: 12px;
   }
 
   .seks {
     width: 96%;
+    height: 100%;
+    font-size: 12px;
   }
+
+  .ommig {
+    margin-left: 30%;
+  }
+
+  .line {
+    width: 80%;
+  }
+
 }
