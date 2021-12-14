@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Portfolio item</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <!--  header -->
+      <header>
+        <div>
+          <a href="index.html" class="logo">JTLD</a>
+          <nav>
+            <ul>
+              <li><a href="index.html#about">Om mig</a></li>
+              <li><a href="index.html#projects">Projekter</a></li>
+              <li><a href="https://proces.jackytld.dk/">Portfolio</a></li>
+              <li><a href="index.html#footer">Kontakt</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="toggle" onclick="toggleClassName();"></div>
+      </header>
+
+      <!--  Sidebar -->
+
+      <div class="sidebar">
+        <ul>
+          <li><a href="index.html/about">Om mig</a></li>
+          <li><a href="index.html#projects">Projekter</a></li>
+          <li><a href="https://proces.jackytld.dk/">Portfolio</a></li>
+          <li><a href="index.html#footer">Kontakt</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Content -->
+
+    <section class="content">
+        <!--<h1 class="content-title">
+          Dette er et <strong>projekt titel</strong>
+        </h1>
+        <p class="content-p">blablabla</p>
+        <img src="images/portfolio-template.jpg" width=200px height=400px>-->
+
+        <div class="portfolio-container">
+
+        <div class="portfolio-item-individual">
+          <br><h1>Redesign af hjemmeside</h1>
+          <br><p>I dette projekt fik vi til opgave at re-designe en hjemmeside som vi følte havde mange mangler ift. design og funktionalitet.
+             Vi blev delt i tilfældige grupper på 4 personer og vi skulle derefter gå i gang med at skrive en gruppekontrakt.
+              Gruppekontrakten indebar forskelligt indhold men primært rettet mod hvordan arbejdet skulle fungere i gruppen indbyrdes.
+               Efter dannelse af gruppekontrakt og gruppeleder sluttede vi kickoff af med Q&A vedrørende projektet og at finde en hjemmeside vi ville have som vores “klient”,
+                vores gruppe agerede os med en lokal dyreklinik i Dalum.</p><br>
+          <img src="images/portfolio-template.jpg" width=200px height=400px>
+          <br><p>I dette projekt fik vi til opgave at re-designe en hjemmeside som vi følte havde mange mangler ift. design og funktionalitet.
+            Vi blev delt i tilfældige grupper på 4 personer og vi skulle derefter gå i gang med at skrive en gruppekontrakt.
+             Gruppekontrakten indebar forskelligt indhold men primært rettet mod hvordan arbejdet skulle fungere i gruppen indbyrdes.
+              Efter dannelse af gruppekontrakt og gruppeleder sluttede vi kickoff af med Q&A vedrørende projektet og at finde en hjemmeside vi ville have som vores “klient”,
+               vores gruppe agerede os med en lokal dyreklinik i Dalum.</p><br>
+         <img src="images/portfolio-template.jpg" width=200px height=400px>
+         <br><p>I dette projekt fik vi til opgave at re-designe en hjemmeside som vi følte havde mange mangler ift. design og funktionalitet.
+          Vi blev delt i tilfældige grupper på 4 personer og vi skulle derefter gå i gang med at skrive en gruppekontrakt.
+           Gruppekontrakten indebar forskelligt indhold men primært rettet mod hvordan arbejdet skulle fungere i gruppen indbyrdes.
+            Efter dannelse af gruppekontrakt og gruppeleder sluttede vi kickoff af med Q&A vedrørende projektet og at finde en hjemmeside vi ville have som vores “klient”,
+             vores gruppe agerede os med en lokal dyreklinik i Dalum.</p><br>
+       <img src="images/portfolio-template.jpg" width=200px height=400px>
+        </div>
+
+      </div>
+
+    </section>
+    <div class="gap"></div>
+
+
+
+    <script type="text/javascript">
+      function toggleClassName() {
+        var sidebar = document.querySelector(".sidebar");
+        var wrapper = document.querySelector(".wrapper");
+        var toggle = document.querySelector(".toggle");
+        sidebar.classList.toggle("active");
+        wrapper.classList.toggle("active");
+        toggle.classList.toggle("active");
+      }
+
+      window.addEventListener("scroll", function () {
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+      });
+    </script>
+
+  </body>
+</html>
