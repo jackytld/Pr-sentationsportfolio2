@@ -417,9 +417,6 @@ nav ul a:hover {
 
 /* Individual portfolio item styles */
 
-.content {
-}
-
 .portfolio-container {
   margin-top: 10%;
   margin-left: 5%;
@@ -445,34 +442,86 @@ nav ul a:hover {
   height: 7%;
 }
 
-/*
-.split3 {
-  display: grid;
-  height: 100%;
-  margin-left: 5%;
-  margin-right: 5%;
-  grid-template-rows: repeat(6, 1fr);
-  grid-template-columns: repeat(2, 1fr);
- 
+
+/* --- Kontakt --- */
+
+.footer {
+  height: 700px;
 }
 
-.projekt-container {
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
-}
-
-.projekt-billede {
-  display: grid;
-  background-color: white;
-  height: 100%;
-  width: 500px;
+.kontakt {
+  font-family: "futura-pt", sans-serif;
+  font-style: normal;
+  color: var(--orange);
+  font-weight: bold;
+  font-size: 30px;
+  position: relative;
   border: 3px solid var(--orange);
+  display: inline-block;
+  text-decoration: none;
+  background: transparent;
+  padding: 12px 34px;
+  margin-left: 45%;
+  margin-bottom: 2%;
 }
 
-.projekt-beskrivelse {
-  display: grid;
-  height: 100%;
+/*.contact-box {
   width: 500px;
-  border: 1px solid black;
-}  */
+  height: 500px;
+  background-color: #fff;
+  border: 3px solid var(--orange);
+  top: 50%;
+  left: 50%;
+  position: relative;
+}*/
 
+form { 
+  max-width:600px; 
+  margin:50px auto; 
+  background: white;
+  border: 3px solid var(--orange);
+  padding: 5%;
+  box-shadow: -14px 12px 0px rgba(0, 0, 0, 0.16);
+}
+
+.feedback-input {
+  color:black;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border: 2px solid var(--orange);
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
+
+.feedback-input:focus { border:2px solid #CC4949; }
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+}
+
+[type="submit"] {
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  background:var(--orange);
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+[type="submit"]:hover { background:#CC4949; }
