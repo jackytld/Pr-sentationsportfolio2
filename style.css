@@ -216,7 +216,7 @@ nav ul a:hover {
   width: 90%;
   height: 5px;
   background: var(--orange);
-  margin: 50px;
+  margin: 5%;
   border-radius: 5px;
 }
 
@@ -314,7 +314,6 @@ nav ul a:hover {
   display: flex;
   max-height: 700px;
   width: 50%;
-  margin-right: 10px;
 }
 
 .seks div {
@@ -367,11 +366,113 @@ nav ul a:hover {
   }
 
   .ommig {
-    margin-left: 30%;
-  }
-
-  .line {
-    width: 80%;
+    font-size: 16px;
   }
 
 }
+
+/* --- Projekter --- */
+
+.mineprojekter {
+  font-family: "futura-pt", sans-serif;
+  font-style: normal;
+  color: var(--orange);
+  font-weight: bold;
+  font-size: 30px;
+  position: relative;
+  border: 3px solid var(--orange);
+  display: inline-block;
+  text-decoration: none;
+  background: transparent;
+  padding: 12px 34px;
+  margin-left: 42%;
+  margin-bottom: 2%;
+}
+
+.projects {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}
+
+.portfolio-item {
+  background: var(--orange);
+  overflow: hidden;
+  height: 400px;
+}
+
+.portfolio-img {
+  transition: transform 750ms cubic-bezier(.5, 0, .5, 1),
+  opacity 250ms linear;
+}
+
+.portfolio-img:hover {
+  transform: scale(1.2);
+  opacity: .75;
+}
+
+/* Individual portfolio item styles */
+
+.content {
+}
+
+.portfolio-container {
+  margin-top: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 2%;
+  background-color: white;
+  border: 5px solid var(--orange);
+  box-shadow: -14px 12px 0px rgba(0, 0, 0, 0.16);
+}
+
+.portfolio-item-individual {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.portfolio-item-individual p, h1 {
+  max-width: 1000px;
+  margin-left: 2%;
+  font-size: 28px;
+}
+
+.gap {
+  height: 7%;
+}
+
+/*
+.split3 {
+  display: grid;
+  height: 100%;
+  margin-left: 5%;
+  margin-right: 5%;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+ 
+}
+
+.projekt-container {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.projekt-billede {
+  display: grid;
+  background-color: white;
+  height: 100%;
+  width: 500px;
+  border: 3px solid var(--orange);
+}
+
+.projekt-beskrivelse {
+  display: grid;
+  height: 100%;
+  width: 500px;
+  border: 1px solid black;
+}  */
+
