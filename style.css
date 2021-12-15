@@ -7,10 +7,6 @@
   --grey: #6E6E74;
 }
 
-img {
-  width: 100%;
-}
-
 /* SITE */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
@@ -25,7 +21,6 @@ img {
 }
 body {
   background: var(--background);
-  height: 1000px;
   overflow-x: hidden;
 }
 
@@ -75,7 +70,7 @@ header .toggle.active {
   background-size: cover;
 }
 
-@media (min-width: 991px) {
+@media (min-width: 768px) {
   header .toggle {
     display: none;
   }
@@ -87,7 +82,7 @@ header .toggle.active {
   color: var(--lightgrey);
 }
 
-@media (max-width: 991px) {
+@media (max-width: 768px) {
   nav {
     display: none;
   }
@@ -104,14 +99,13 @@ nav ul {
 nav ul a {
   padding: 20px 20px;
   text-decoration: none;
-  color: #fdab7b;
+  color: #fff;
   font-weight: bold;
 }
 
 nav ul a:hover {
-  color: rgb(255, 255, 255);
+  color: #3f8ffc;
 }
-
 
 /* --- SIDEBAR --- */
 
@@ -245,10 +239,10 @@ nav ul a:hover {
   color: var(--lightgrey);
 }
 
+
 @media (max-width: 991px) {
   
 .hero {
-    height: 40%;
     width: 100%;;
   }
 
@@ -270,9 +264,39 @@ nav ul a:hover {
 
 }
 
+@media only screen and (max-width: 375px) {
+  .hero {
+  height: 400px;
+  }
+
+  .titel {
+    text-align: center;
+  }
+
+  .hero-txt h1 {
+  font-size: 25px;
+  left: 90%;
+  bottom: 5%;
+  }
+
+  .hero-txt p {
+  font-size: 25px;
+  right: 10%;
+  }
+  
+  .contactBtn {
+    font-size: 15px;
+  }
+
+}
+
 /* --- About --- */
 
-.ommig {
+.titel {
+  text-align: center;
+}
+
+.titel-txt {
   font-family: "futura-pt", sans-serif;
   font-style: normal;
   color: var(--orange);
@@ -284,9 +308,7 @@ nav ul a:hover {
   text-decoration: none;
   background: transparent;
   padding: 12px 34px;
-  margin-left: 45%;
   margin-bottom: 2%;
-  
 }
 
 .split2 {
@@ -299,15 +321,20 @@ nav ul a:hover {
 
 .en {
   display: flex;
-  height: 100%;
+  height: 96%;
   background-color: white;
   margin: 10px;
   padding: 10px;
   width: 50%;
   border: 3px solid var(--orange);
-  font-size: 1.5vw;
+  font-size: 24px;
   box-shadow: -14px 12px 0px rgba(0, 0, 0, 0.16);
   font-family: 'futura-pt', sans-serif;
+  overflow: scroll;
+}
+
+.en p {
+  margin-top: 10%;
 }
 
 .seks {
@@ -330,6 +357,8 @@ nav ul a:hover {
   position: relative;
   display: flex;
   flex-direction: column;
+  overflow: scroll;
+  font-size: 18px;
 }
 
 .box-txt {
@@ -348,46 +377,65 @@ nav ul a:hover {
   max-width: 100%;
 }
 
-@media (max-width: 991px) {
-  .split2 {
-    flex-direction: column;
+
+/* --- Media tags --- */
+@media only screen and (max-width: 1030px) {
+
+.en p {
+font-size: 18px;
+}
+
+.split2 {
+  flex-direction: column;
+  height: 1200px;
+}
+
+.en {
+  width: 98%;
+}
+
+.seks {
+  width: 99%;
+  height: 100%;
   }
 
-  .en {
-    width: 96%;
-    margin-right: 10px;
-    font-size: 12px;
-  }
+}
 
-  .seks {
-    width: 96%;
-    height: 100%;
-    font-size: 12px;
-  }
+@media only screen and (max-width: 540px) {
 
-  .ommig {
-    font-size: 16px;
-  }
+.seks {
+  flex-direction: column;
+  width: 98%;
+}
+
+.split2 {
+  margin-bottom: 850px;
+}
+
+}
+
+@media only screen and (max-width: 375px) {
+
+.en {
+  width: 96%;
+}
+
+.seks {
+  width: 96%;
+}
+
+.en p {
+  font-size: 16px;
+}
+
+.box1, .box2, .box3, .box4, .box5, .box6 { 
+ font-size: 16px; 
+}
 
 }
 
 /* --- Projekter --- */
 
-.mineprojekter {
-  font-family: "futura-pt", sans-serif;
-  font-style: normal;
-  color: var(--orange);
-  font-weight: bold;
-  font-size: 30px;
-  position: relative;
-  border: 3px solid var(--orange);
-  display: inline-block;
-  text-decoration: none;
-  background: transparent;
-  padding: 12px 34px;
-  margin-left: 42%;
-  margin-bottom: 2%;
-}
 
 .projects {
   margin-left: 5%;
@@ -403,11 +451,15 @@ nav ul a:hover {
   background: var(--orange);
   overflow: hidden;
   height: 400px;
+  border: 2px solid var(--orange);
 }
 
 .portfolio-img {
   transition: transform 750ms cubic-bezier(.5, 0, .5, 1),
   opacity 250ms linear;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .portfolio-img:hover {
@@ -415,13 +467,35 @@ nav ul a:hover {
   opacity: .75;
 }
 
+@media only screen and (max-width: 540px) {
+  .portfolio {
+    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+  }
+}
+
+
+/* Mobil version */
+@media only screen and (max-width: 375px) {
+
+.portfolio-item {
+  width: 337px;
+}
+
+.titel {
+  margin-top: 10%;
+  margin-bottom: 8%;
+}
+
+}
+
+
 /* Individual portfolio item styles */
 
 .portfolio-container {
   margin-top: 10%;
   margin-left: 5%;
   margin-right: 5%;
-  padding: 2%;
+  padding: 5%;
   background-color: white;
   border: 5px solid var(--orange);
   box-shadow: -14px 12px 0px rgba(0, 0, 0, 0.16);
@@ -434,46 +508,42 @@ nav ul a:hover {
 
 .portfolio-item-individual p, h1 {
   max-width: 1000px;
-  margin-left: 2%;
-  font-size: 28px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 22px;
 }
 
 .gap {
-  height: 7%;
+  margin-top: 5%;
+}
+
+.portfolio-item-individual img {
+  width: 100%;
+  height: auto;
+  object-fit: scale-down;
+}
+
+.img-column {
+  float: left;
+  width: 25%;
+}
+
+.portfolio-container p {
+  display: inline-block;
+}
+
+@media (max-width: 375px) {
+  .portfolio-container p {
+    font-size: 16px;
+  }
 }
 
 
-/* --- Kontakt --- */
+  /* --- Kontakt --- */
 
 .footer {
   height: 700px;
 }
-
-.kontakt {
-  font-family: "futura-pt", sans-serif;
-  font-style: normal;
-  color: var(--orange);
-  font-weight: bold;
-  font-size: 30px;
-  position: relative;
-  border: 3px solid var(--orange);
-  display: inline-block;
-  text-decoration: none;
-  background: transparent;
-  padding: 12px 34px;
-  margin-left: 45%;
-  margin-bottom: 2%;
-}
-
-/*.contact-box {
-  width: 500px;
-  height: 500px;
-  background-color: #fff;
-  border: 3px solid var(--orange);
-  top: 50%;
-  left: 50%;
-  position: relative;
-}*/
 
 form { 
   max-width:600px; 
@@ -501,7 +571,9 @@ form {
   outline:0;
 }
 
-.feedback-input:focus { border:2px solid #CC4949; }
+.feedback-input:focus { 
+  border:2px solid #CC4949; 
+}
 
 textarea {
   height: 150px;
@@ -524,4 +596,16 @@ textarea {
   margin-top:-4px;
   font-weight:700;
 }
-[type="submit"]:hover { background:#CC4949; }
+
+[type="submit"]:hover { 
+  background:#CC4949; 
+}
+
+/* Mobil version */
+@media only screen and (max-width: 375px) {
+
+form {
+  max-width: 300px;
+}
+  
+}
