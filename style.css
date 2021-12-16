@@ -79,7 +79,7 @@ header .toggle.active {
   display: flex;
   font-size: 33px;
   text-decoration: none;
-  color: var(--lightgrey);
+  color: white;
 }
 
 @media (max-width: 768px) {
@@ -537,6 +537,24 @@ font-size: 18px;
     font-size: 16px;
   }
 }
+
+.hund {
+  width:450px;
+  height:383px;
+  background-image: url("images/spritesheet3.png");
+  margin: 2% auto;
+  animation: play 1s steps(9) infinite;
+  
+}
+
+@keyframes play {
+  0% {
+  background-position: 0 0;
+}
+  100% { background-position: 0 -3456px;
+  }
+}
+
 
 
   /* --- Kontakt --- */
