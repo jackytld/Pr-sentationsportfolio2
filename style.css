@@ -17,7 +17,7 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', 'sans-serif';
 }
 body {
   background: var(--background);
@@ -259,7 +259,7 @@ nav ul a:hover {
   }
 
   .contactBtn {
-  font-size: 2.5vw;
+  font-size: 20px;
 }
 
 }
@@ -353,7 +353,7 @@ nav ul a:hover {
   background-color: white;
   height: 32%;
   border: 3px solid var(--orange);
-  box-shadow: -14px 12px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: -8px 8px 0px rgba(0, 0, 0, 0.16);
   position: relative;
   display: flex;
   flex-direction: column;
